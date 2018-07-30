@@ -1,11 +1,19 @@
 .headerBg {
   background-color: #f6fbfb;
+  border-bottom: 1px solid #ccced0;
+    margin-bottom: 20px;
 }
 .headerIcon {
-  display: inline-block;
-  margin-right: 30px;
-  padding: 10px;
-  border: 1px solid #c2d9d9;
+    display: inline-block;
+    margin: 0;
+    margin-left: 30px;
+    background-color: #eff3f6;
+    background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%);
+    border: 1px solid #1b1f2333;
+    padding: 2px 0;
+    font-size: 12px;
+    border-radius: 3px;
+        font-weight: bold;
 }
 ul.headerLink li {
   list-style: none;
@@ -14,12 +22,89 @@ ul.headerLink li {
 }
 
 ul.headerLink {
-  padding-left: 0;
 }
 a {
+  text-decoration: none;
+  color: #21272d;
+}
+a:hover {
   text-decoration: none;
 }
 .dataRow {
   list-style: none;
   padding-left: 0;
 }
+.titleHeader .fa-old-republic {
+    color: #ccc;
+}
+
+.titleHeader .titleLink {
+    color: #1964d3;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.titleHeader {
+    padding: 10px 0;
+}
+
+.headerIcon .innerLeft {
+    border-right: 1px solid #b7cace;
+    padding: 4px 5px;
+}
+
+.headerIcon .innerLeft .fa-sort-down {
+    top: -2px;
+    position: relative;
+}
+
+.headerIcon .innerRight {
+    background: #fff;
+    padding: 2px 5px;
+}
+
+.headerLink a {
+    color: #586069;
+    padding: 5px 10px;
+}
+
+
+.headerLink a i {
+    color: #1b1f234d;
+}
+
+.headerLink a .badge {
+    background-color: #1b1f2314;
+    color: #635c5c;
+}
+
+.headerLink a.active {
+    background: #fff;
+    padding-bottom: 10px;
+    border-top: 3px solid #e36209;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    padding-top: 9px;
+}
+
+.headerTabs {
+    margin-bottom: -9px;
+    margin-top: 25px;
+}
+.searchFilters .dropdown-toggle {
+    background-color: #eff3f6;
+    background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%);
+    border: 1px solid #1b1f2333;
+    color: #000;
+}
+
+.searchFilters .issueSearch .form-control {
+    background: #f6fbfb;
+}
+
+.searchFilters .switchBtn button {
+    background: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+}
+

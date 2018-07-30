@@ -1,11 +1,11 @@
 <section class="container-fluid headerBg">
   <div class="container">
-    <div class="row">
+    <div class="row titleHeader">
       <div class="col-sm">
         <i class="fab fa-old-republic"></i>
-        <a href="">facebook / react</a>
+        <a href="#" class="titleLink">facebook / react</a>
       </div>
-      <div class="col-sm">
+      <div class="col-sm text-right">
         <div class="headerIcon">
           <a href="#" class="innerLeft">
             <i class="fas fa-eye"></i> Watch
@@ -24,7 +24,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row headerTabs">
       <div class="col-sm">
         <nav>
           <ul class="headerLink">
@@ -33,7 +33,7 @@
                 <i class="fas fa-angle-left"></i><i class="fas fa-angle-right"></i> Code</a>
             </li>
             <li>
-              <a href="#">
+              <a href="#" class="active">
                 <i class="fas fa-exclamation-circle"></i> Issues <span class="badge badge-pill badge-light">391</span></a>
             </li>
             <li>
@@ -58,9 +58,9 @@
     </div>
   </div>
 </section>
-<section class="container issueSearch">
-  <div class="row">
-    <div class="col-sm-8">
+<section class="container">
+  <div class="row searchFilters">
+    <div class="col-sm-5 issueSearch">
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filters</button>
@@ -73,14 +73,16 @@
           </div>
         </div>
         <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder=" is:issue is:open">
-        <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-secondary">Left</button>
-          <button type="button" class="btn btn-secondary">Right</button>
-        </div>
       </div>
     </div>
-    <div class="col-sm">
-      <button type="button" class="btn btn-primary">Primary</button>
+    <div class="col-sm switchBtn">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary">Labels</button>
+        <button type="button" class="btn btn-secondary">Milestones</button>
+      </div>
+    </div>
+    <div class="col-sm newIssue">
+      <button type="button" class="btn btn-success float-right">New Issue</button>
     </div>
   </div>
   <div class="row">
@@ -98,27 +100,27 @@
           </a>
         </li>
         <li>
-          <a href="#">Author
+          <a href="#">Labels
             <i class="fas fa-sort-down"></i>
           </a>
         </li>
         <li>
-          <a href="#">Author
+          <a href="#">Projects
             <i class="fas fa-sort-down"></i>
           </a>
         </li>
         <li>
-          <a href="#">Author
+          <a href="#">Milestones
             <i class="fas fa-sort-down"></i>
           </a>
         </li>
         <li>
-          <a href="#">Author
+          <a href="#">Assignee
             <i class="fas fa-sort-down"></i>
           </a>
         </li>
         <li>
-          <a href="#">Author
+          <a href="#">Sort
             <i class="fas fa-sort-down"></i>
           </a>
         </li>
