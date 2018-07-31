@@ -12,7 +12,6 @@ export class IssuesComponent implements OnInit {
   totalIssues:any;
   ngOnInit() {
     this.http.get('https://api.github.com/repos/facebook/react/issues').subscribe((res)=> {
-      console.log(res);
       this.totalIssues = res;
     })
   }
