@@ -1,0 +1,87 @@
+  <div class="row searchFilters">
+    <div class="col-sm-5 issueSearch">
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Filters</button>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+            <div role="separator" class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Separated link</a>
+          </div>
+        </div>
+        <input type="text" class="form-control" aria-label="Text input with dropdown button" placeholder=" is:issue is:open">
+      </div>
+    </div>
+    <div class="col-sm switchBtn">
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary">Labels</button>
+        <button type="button" class="btn btn-secondary">Milestones</button>
+      </div>
+    </div>
+    <div class="col-sm newIssue">
+      <button type="button" class="btn btn-success float-right">New Issue</button>
+    </div>
+  </div>
+  <div class="row sortHeader">
+    <div class="col-sm-4 sortCount">
+      <span><i class="fas fa-exclamation-circle"></i> {{totalIssues?.length}} Open</span>
+      <span>
+        <i class="fas fa-check"></i> 5,749 Closed</span>
+    </div>
+    <div class="col-sm-8">
+      <ul class="sortList">
+        <li>
+          <a href="#">Author
+            <i class="fas fa-sort-down"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">Labels
+            <i class="fas fa-sort-down"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">Projects
+            <i class="fas fa-sort-down"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">Milestones
+            <i class="fas fa-sort-down"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">Assignee
+            <i class="fas fa-sort-down"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#">Sort
+            <i class="fas fa-sort-down"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm">
+      <ul class="dataList">
+        <li class="row dataRow" *ngFor="let data of totalIssues let i = index">
+          <div class="float-left pt-2 dataIcon ml-3">
+            <i class="fas fa-exclamation-circle text-success"></i>
+          </div>
+          <div class="float-left col-9 lh-condensed p-2 dataTitle">
+            <strong> {{data.title}}</strong>
+            <br>
+            <span>#{{data.number}} opened {{data.created_at | timeAgo}} by {{data.user.login}}</span>
+            <span *ngFor="let labels of data.labels"><span class="badge badge-success ml-3" style.background="#{{labels.color}}">{{labels.name}}</span></span>
+          </div>
+          <div *ngIf="data.comments!=0" class="text-right ml-5 col-2 mt-3 dataMessage">
+            <i class="far fa-comment-alt"></i> {{data.comments}}
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>

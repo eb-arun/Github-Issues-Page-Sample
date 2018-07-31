@@ -30,10 +30,6 @@ a {
 a:hover {
   text-decoration: none;
 }
-.dataRow {
-  list-style: none;
-  padding-left: 0;
-}
 .titleHeader .fa-old-republic {
     color: #ccc;
 }
@@ -108,3 +104,48 @@ a:hover {
     border: 1px solid #ccc;
 }
 
+.sortHeader {
+    background: #f4f5f7;
+    padding: 15px 0;
+    border: 1px solid #ced4da;
+    margin: 0;
+    font-size: 14px;
+}
+.sortHeader .sortCount i {/* margin: 0 11px; */}
+
+.sortHeader .sortCount span {
+    margin-right: 20px;
+}
+.sortHeader .sortCount span:last-child {
+    color: #777676;
+}
+
+.sortHeader .sortList {
+    list-style: none;
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.sortHeader .sortList li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.sortHeader .sortList li i {
+    position: relative;
+    top: -3px;
+}
+
+.dataList .dataRow {
+    border-bottom: 1px solid #ced4da;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.dataList {
+    border-left: 1px solid #ced4da;
+    border-right: 1px solid #ced4da;
+    font-size: 14px;
+    list-style: none;
+    padding-left: 0;
+}
