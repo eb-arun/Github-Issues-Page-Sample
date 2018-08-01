@@ -72,13 +72,13 @@
           <div class="float-left pt-2 dataIcon ml-3">
             <i class="fas fa-exclamation-circle text-success"></i>
           </div>
-          <div class="float-left col-9 lh-condensed p-2 dataTitle">
+          <div class="float-left col-7 col-sm-9 col-md-8 col-lg-9 lh-condensed p-2 dataTitle">
             <strong> {{data.title}}</strong>
             <br>
             <span>#{{data.number}} opened {{data.created_at | timeAgo}} by {{data.user.login}}</span>
             <span *ngFor="let labels of data.labels"><span class="badge badge-success ml-3" style.background="#{{labels.color}}">{{labels.name}}</span></span>
           </div>
-          <div *ngIf="data.comments!=0" class="text-right ml-5 col-2 mt-3 dataMessage">
+          <div *ngIf="data.comments!=0" class="text-right col-3 col-sm-2 mt-3 dataMessage">
             <i class="far fa-comment-alt"></i> {{data.comments}}
           </div>
         </li>
